@@ -9,6 +9,7 @@ public class ReverseAPI {
 
     @RequestMapping(path = "/{stringToReverse}/")
     public String reverseString(@PathVariable("stringToReverse") String stringToReverse) {
-        return stringToReverse;
+        StringBuilder stringBuilder = new StringBuilder(stringToReverse);
+        return stringBuilder.reverse().toString();
     }
 }
